@@ -1,0 +1,33 @@
+.weather-icon {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0.5rem auto;
+  display: block;
+  text-align: center;
+  animation: popIn 0.6s ease-out;
+}
+
+.weather-icon.sunny {
+  color: #FFD700; /* gold */
+}
+
+.weather-icon.cloudy {
+  color: #B0C4DE; /* light steel blue */
+}
+
+.weather-icon.rainy {
+  color: #00BFFF; /* deep sky blue */
+}
+
+.weather-icon.snowy {
+  color: #E0FFFF; /* light cyan */
+}
+
+.weather-icon.storm {
+  color: #FF4500; /* orange red */
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
