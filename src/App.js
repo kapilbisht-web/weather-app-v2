@@ -24,11 +24,13 @@ function App() {
  const fetchWeather = async () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const apiKey = process.env.REACT_APP_API_KEY;
-
-  if (!apiUrl || !apiKey) {
-    alert("API configuration missing. Check your .env file.");
-    return;
-  }
+  console.log("API URL:", apiUrl);
+console.log("API Key:", apiKey);
+console.log("Test Var:", process.env.REACT_APP_TEST_VAR);
+if (!apiUrl || !apiKey) {
+  alert("API configuration missing. Check your .env file.");
+  return;
+}
 
   try {
     setIsLoading(true);
