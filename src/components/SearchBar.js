@@ -1,10 +1,10 @@
 import React from 'react';
 import '../SearchBar.css';
 import { FaSearch } from 'react-icons/fa';
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-
-
-const SearchBar = ({ onSearch, city,weather, setCity, onSave,onUseLocation }) => {
+const SearchBar = ({ onSearch, city, weather, setCity, onSave, onUseLocation }) => {
   return (
     <div className="search-container">
       <div className="search-input-wrapper">
@@ -20,42 +20,47 @@ const SearchBar = ({ onSearch, city,weather, setCity, onSave,onUseLocation }) =>
 
       <div className="button-group">
         <button
-          type="button"
-          className="search-button"
-          onClick={onSearch}
-          disabled={!city.trim()}
-        >
-          🔍 Get Weather
-        </button>
-
-        <button
-          type="button"
-          className="save-button"
-        onClick={() => {
+  type="button"
+  className="search-button"
+  onClick={() => {
     if (!city.trim()) {
-      alert("⚠️ Please enter a city name before saving.");
+      toast.error("⚠️ Please enter a city name before searching.");
+      return;
+    }
+    onSearch(); // Only call if valid
+  }}
+>
+  🔍 Get Weather
+</button>
+
+       <button
+  type="button"
+  className="save-button"
+  onClick={() => {
+    if (!city.trim()) {
+      toast.error("⚠️ Please enter a city name before saving.");
       return;
     }
     if (!weather) {
-      alert("⚠️ Please fetch the weather before saving.");
+      toast.error("⚠️ Please fetch the weather before saving.");
       return;
     }
     onSave(); // Proceed with saving
   }}
+>
+  💾 Save Weather
+</button>
 
-          
-        >
-          💾 Save Weather
-        </button>
-         <button
+        <button
           type="button"
           className="location-button"
           onClick={onUseLocation}
         >
           📍 Use My Location
         </button>
-
       </div>
+
+      <ToastContainer />
     </div>
   );
 };
