@@ -9,6 +9,12 @@
   text-align: center;
 }
 
+.weather-summary {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 0.5rem 0;
+  color: #555;
+}
 .weather-card.rain {
   background: linear-gradient(to bottom right, #4b79a1, #283e51);
 }
