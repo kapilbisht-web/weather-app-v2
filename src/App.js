@@ -24,18 +24,18 @@ function App() {
  const fetchWeather = async () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const apiKey = process.env.REACT_APP_API_KEY;
-   console.log("API URL:", apiUrl);
-console.log("API Key:", apiKey);
-console.log("Test Var:", process.env.REACT_APP_TEST_VAR);
-   console.log("API URL:", apiUrl);
-console.log("API Key:", apiKey);
-console.log("Test Var:", process.env.REACT_APP_TEST_VAR);console.log("API URL:", apiUrl);
-console.log("API Key:", apiKey);
-console.log("Test Var:", process.env.REACT_APP_TEST_VAR);console.log("API URL:", apiUrl);
-console.log("API Key:", apiKey);
-console.log("Test Var:", process.env.REACT_APP_TEST_VAR);console.log("API URL:", apiUrl);
-console.log("API Key:", apiKey);
-console.log("Test Var:", process.env.REACT_APP_TEST_VAR);
+//    console.log("API URL:", apiUrl);
+// console.log("API Key:", apiKey);
+// console.log("Test Var:", process.env.REACT_APP_TEST_VAR);
+//    console.log("API URL:", apiUrl);
+// console.log("API Key:", apiKey);
+// console.log("Test Var:", process.env.REACT_APP_TEST_VAR);console.log("API URL:", apiUrl);
+// console.log("API Key:", apiKey);
+// console.log("Test Var:", process.env.REACT_APP_TEST_VAR);console.log("API URL:", apiUrl);
+// console.log("API Key:", apiKey);
+// console.log("Test Var:", process.env.REACT_APP_TEST_VAR);console.log("API URL:", apiUrl);
+// console.log("API Key:", apiKey);
+// console.log("Test Var:", process.env.REACT_APP_TEST_VAR);
    
 if (!apiUrl || !apiKey) {
   alert("API configuration missing. Check your .env file.");
@@ -64,7 +64,7 @@ if (!apiUrl || !apiKey) {
 
   const fetchHistory = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/history');
+      const res = await fetch('https://weather-app-v2-tx2b.onrender.com/api/history');
       const data = await res.json();
        const sortedData = data
       .filter(entry => entry.createdAt) // optional: filter out invalid entries
@@ -101,17 +101,17 @@ if (isDuplicateRecent) {
 }
 
     try {
-      await fetch('http://localhost:5000/api/logWeather', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          city: weather.name,
-          temperature: weather.main.temp,
-          condition: weather.weather[0].main,
-          icon: weather.weather[0].icon,
-           createdAt: new Date().toISOString()
-        }),
-      });
+      await fetch('https://weather-app-v2-tx2b.onrender.com/api/logWeather', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    city: weather.name,
+    temperature: weather.main.temp,
+    condition: weather.weather[0].main,
+    icon: weather.weather[0].icon,
+    createdAt: new Date().toISOString()
+  }),
+});
       fetchHistory(); // Refresh history after saving
     } catch (error) {
       console.error('Error saving weather:', error);
