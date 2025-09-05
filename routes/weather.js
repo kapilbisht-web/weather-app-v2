@@ -1,7 +1,7 @@
 // server/routes/weather.js
 import express from 'express';
-import WeatherLog from '../models/WeatherLog.js'; // ✅ Use default import
-const router = express.Router(); // ✅ Create router instance
+import WeatherLog from '../models/WeatherLog.js'; //  Use default import type=module is package.json
+const router = express.Router(); //  Create router instance
 
 router.post('/logWeather', async (req, res) => {
   try {
