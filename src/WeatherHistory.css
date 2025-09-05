@@ -1,0 +1,20 @@
+.history-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
+.empty-msg {
+  font-style: italic;
+  color: #888;
+}
+.history-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+  color: #444;
+}
+.weather-icon {
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 8px;
+}

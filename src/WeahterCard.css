@@ -1,0 +1,28 @@
+.weather-card {
+  background: linear-gradient(to bottom right, #2c3e50, #34495e);
+  color: #010101ff;
+  padding:20px;
+  border-radius: 22px;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.weather-summary {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 0.5rem 0;
+  color: #555;
+}
+.weather-card.rain {
+  background: linear-gradient(to bottom right, #4b79a1, #283e51);
+}
+
+.weather-card.clear {
+  background: linear-gradient(to bottom right, #f7b733, #fc4a1a);
+}
+
+.weather-card.clouds {
+  background: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
+}
