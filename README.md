@@ -1,6 +1,36 @@
 WEATHER APP USING REACT.js
+## 🔗 Live Demo
+Check it out here:(https://kapilbisht-web.github.io/weather-app-v2/)
 
-https://kapilbisht-web.github.io/weather-app-v2/
+# 🌦️ Weather App
+
+A sleek, responsive weather application that fetches real-time weather data for any city using OpenWeatherMap API. Built with a clean UI and mobile-first design, this app helps users check temperature, humidity, and wind speed instantly.
+
+## 🚀 Features
+- 🌍 Search weather by city name
+- 🌡️ Displays temperature, humidity, and wind speed
+- 📱 Fully responsive for mobile and desktop
+- ⚠️ Handles invalid city input gracefully
+
+## 🛠️ Tech Stack
+- **Frontend:** HTML, CSS, JavaScript
+- **API:** [OpenWeatherMap](https://openweathermap.org/api)
+- **Deployment:** GitHub Pages
+
+## 📸 Preview
+![Weather App Screenshot](screenshot.png) <!-- Replace with actual screenshot if available -->
+
+## 🧠 How It Works
+1. User enters a city name.
+2. App fetches weather data from OpenWeatherMap API.
+3. Displays current temperature, humidity, and wind speed.
+4. Shows error message for invalid city names.
+
+## 📦 Installation & Setup
+```bash
+git clone https://github.com/kapilbisht-web/Weather-App.git
+cd Weather-App
+# Open index.html in your browser
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
